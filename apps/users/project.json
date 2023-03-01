@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-jwt-authentication",
+  "name": "users",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nestjs-jwt-authentication/src",
+  "sourceRoot": "apps/users/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,12 +10,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/nestjs-jwt-authentication",
-        "main": "apps/nestjs-jwt-authentication/src/main.ts",
-        "tsConfig": "apps/nestjs-jwt-authentication/tsconfig.app.json",
-        "assets": ["apps/nestjs-jwt-authentication/src/assets"],
+        "outputPath": "dist/apps/users",
+        "main": "apps/users/src/main.ts",
+        "tsConfig": "apps/users/tsconfig.app.json",
+        "assets": ["apps/users/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/nestjs-jwt-authentication/webpack.config.js"
+        "webpackConfig": "apps/users/webpack.config.js"
       },
       "configurations": {
         "production": {
@@ -28,11 +28,11 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "nestjs-jwt-authentication:build"
+        "buildTarget": "users:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "nestjs-jwt-authentication:build:production"
+          "buildTarget": "users:build:production"
         }
       }
     },
@@ -40,14 +40,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nestjs-jwt-authentication/**/*.ts"]
+        "lintFilePatterns": ["apps/users/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nestjs-jwt-authentication/jest.config.ts",
+        "jestConfig": "apps/users/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

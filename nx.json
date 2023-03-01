@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "my-workspace",
+  "npmScope": "nestjs-jwt-authentication",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
